@@ -13,7 +13,8 @@ export const Container = styled.div`
   width: 80%;
 
   h2,
-  h3 {
+  h3,
+  p {
     font-family: var(--main-font);
   }
 
@@ -53,6 +54,11 @@ export const Container = styled.div`
   }
 
   h3 {
+    text-align: center;
+  }
+
+  p {
+    font-weight: 500;
     text-align: center;
   }
 
