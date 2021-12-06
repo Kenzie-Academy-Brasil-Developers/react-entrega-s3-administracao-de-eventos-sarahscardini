@@ -37,8 +37,46 @@ export const Container = styled.div`
     background-color: var(--yellow2);
   }
 
-  @media (min-width: 768px){
-    .buy, .removeAll{
+  .changePage {
+    background-color: transparent;
+    border: 1px solid var(--black);
+    font-weight: 700;
+    height: 30px;
+    width: 110px;
+  }
+
+  .changePage::after {
+    background-color: transparent;
+  }
+
+  .changePage:hover {
+    background-color: transparent;
+    font-weight: 900;
+    transform: scale(1.1);
+    will-change: unset;
+  }
+  
+  .disableBtn {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--grey1);
+    cursor: unset;
+  }
+
+  .disableBtn::after {
+    background-color: transparent;
+  }
+
+  .disableBtn:hover {
+    background-color: transparent;
+    font-weight: 700;
+    transform: scale(1);
+    will-change: unset;
+  }
+
+  @media (min-width: 768px) {
+    .buy,
+    .removeAll {
       width: 150px;
     }
   }
@@ -56,8 +94,6 @@ export const ButtonStyle = styled.button`
   overflow: hidden;
   padding: 5px;
   position: relative;
-  transition: 0.2s transform ease-in-out;
-  will-change: transform;
   z-index: 0;
 
   &::after {
