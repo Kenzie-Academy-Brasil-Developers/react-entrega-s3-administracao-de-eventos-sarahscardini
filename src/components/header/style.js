@@ -18,6 +18,7 @@ export const Container = styled.div`
   }
 
   .emoji {
+    font-size: 20px;
     margin: 0 5px;
   }
 
@@ -33,6 +34,10 @@ export const Container = styled.div`
   @media (min-width: 1024px) {
     h1 {
       font-size: 36px;
+    }
+
+    .emoji {
+      font-size: 30px;
     }
   }
 `;
