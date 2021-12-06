@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../button";
+import altImage from '../../assets/img/alt.png'
 import { Container } from "./style";
 
 const CartCard = (props) => {
@@ -15,7 +16,10 @@ const CartCard = (props) => {
           <ul>
             {list.map((item, index) => (
               <li key={index}>
-                <img src={item.image_url} alt={item.name} />
+                <img
+                  src={item.image_url ? item.image_url : altImage}
+                  alt={item.name}
+                />
                 <h3>{item.name}</h3>
                 <Button
                   onClick={() => remove(item)}
