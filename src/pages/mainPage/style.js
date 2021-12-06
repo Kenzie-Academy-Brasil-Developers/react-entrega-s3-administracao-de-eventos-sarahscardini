@@ -1,6 +1,19 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  .buttonsBox {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    max-width: 300px;
+  }
+  
+  .lineArrow{
+    width: 10px;
+  }
+
   .toTopBtn {
     border: none;
     color: transparent;
