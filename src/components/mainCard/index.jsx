@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import Button from "../button";
 import EventsDialog from "../eventsDialog";
+import altImage from "../../assets/img/alt.png";
 import { ProductsContext } from "../../providers/products";
 import { Container } from "./style";
 
@@ -11,15 +12,15 @@ const MainCard = ({ handleDetails }) => {
   const [current, setCurrent] = useState([]);
 
   const handleClickOpen = (item) => {
-    setCurrent(item)
+    setCurrent(item);
     setOpen(true);
-  }
+  };
 
   const handleClose = () => setOpen(false);
 
   const cutDescription = (string) => {
     if (string.length >= 50) {
-      string = string.slice(0, 47) + "..."; // 15 with the 3 dots
+      string = string.slice(0, 47) + "...";
     }
     return string;
   };
@@ -30,7 +31,10 @@ const MainCard = ({ handleDetails }) => {
         {products.map((item, index) => (
           <li key={index}>
             <h3>{item.name}</h3>
-            <img src={item.image_url} alt={item.name} />
+            <img
+              src={item.image_url ? item.image_url : altImage}
+              alt={item.name}
+            />
             <div className="liText">
               <p>
                 <strong>First brewed:</strong> {item.first_brewed}
@@ -41,7 +45,10 @@ const MainCard = ({ handleDetails }) => {
               </p>
             </div>
             <div className="btnBox">
-              <Button onClick={() => handleClickOpen(item)} text="Add to an Event" />
+              <Button
+                onClick={() => handleClickOpen(item)}
+                text="Add to an Event"
+              />
               <EventsDialog
                 open={open}
                 handleClose={handleClose}
