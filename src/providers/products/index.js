@@ -11,7 +11,7 @@ export const ProductsProvider = ({ children }) => {
     api
       .get(`?page=${next}`)
       .then((response) => {
-        if (next < 14) {
+        if (response.data) {
           setProducts((prevList) => [...prevList, ...response.data]);
           setNext(next + 1);
         }
