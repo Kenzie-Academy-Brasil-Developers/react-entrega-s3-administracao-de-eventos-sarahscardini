@@ -31,6 +31,11 @@ body{
   font-size: 16px;
   line-height: 20px;
   text-align: center;
+  width: fit-content;
+}
+
+.Toastify__toast{
+  border-radius: 8px;
 }
 
 /* ===== Scrollbar CSS ===== */
