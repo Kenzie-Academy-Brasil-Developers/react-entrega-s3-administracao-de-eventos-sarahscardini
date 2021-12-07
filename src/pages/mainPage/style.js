@@ -7,6 +7,7 @@ export const Container = styled.div`
     flex-flow: row nowrap;
     justify-content: space-evenly;
     margin: 0 auto;
+    margin-block: 15px 35px;
     max-width: 300px;
   }
   
