@@ -45,18 +45,6 @@ const MainPage = () => {
     <Container>
       <Header search={true} />
 
-      <div className="buttonsBox">
-        <Button
-          name={next > 1 ? "previousBtn changePage" : "disableBtn changePage"}
-          text="previous page"
-          onClick={previousPage}
-        />
-        <Button
-          name={!final ? "nextBtn changePage" : "disableBtn changePage"}
-          text="next page"
-          onClick={nextPage}
-        />
-      </div>
       {showArrow && (
         <button onClick={scrollToTop} className="toTopBtn">
           <FiArrowUp />
@@ -71,6 +59,19 @@ const MainPage = () => {
           item={itemDetails}
         />
       )}
+
+      <div className="buttonsBox">
+        <Button
+          name={next > 1 ? "previousBtn changePage" : "disableBtn changePage"}
+          text="previous page"
+          onClick={previousPage}
+        />
+        <Button
+          name={!final ? "nextBtn changePage" : "disableBtn changePage"}
+          text="next page"
+          onClick={nextPage}
+        />
+      </div>
     </Container>
   );
 };
